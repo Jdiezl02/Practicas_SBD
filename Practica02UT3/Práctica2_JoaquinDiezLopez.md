@@ -92,11 +92,8 @@ df['height_m'] = df['height'] / 10  # Convertir decímetros a metros
 df['weight_kg'] = df['weight'] / 10  # Convertir hectogramos a kilogramos
 df['bmi'] = df['weight_kg'] / (df['height_m'] ** 2)
 
-# Formatear columnas
-df['identificador_ninja'] = df.index.map(lambda x: f"ANBU-{x:03d}")
-
 print("\nTransformación completada. Muestra del DataFrame:")
-print(df[['identificador_ninja', 'name', 'height_m', 'weight_kg', 'bmi']].head())
+print(df[['name', 'height_m', 'weight_kg', 'bmi', 'base_experience']].head())
 ```
 
 ## Paso 5
@@ -114,7 +111,7 @@ print(f"- Archivos creados: pergamino_pokemon.csv y pergamino_pokemon.json")
 
 ## Resultados finales
 
-![alt text](image-2.png)
+![alt text](image-3.png)
 
 ## Preguntas de Reflexión
 

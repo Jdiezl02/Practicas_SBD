@@ -2,12 +2,14 @@ import requests
 import time
 import pandas as pd
 
+# Paso 1: Configuración inicial
 url = "https://pokeapi.co/api/v2/pokemon?limit=20"
 todos_los_pokemon = []
 
 print("Iniciando extracción paginada de Pokémon...")
 contador_paginas = 0
 
+# Paso 2: Bucle de paginación
 while url:
     contador_paginas += 1
     print(f"Consultando página {contador_paginas}: {url}")
@@ -32,6 +34,7 @@ while url:
 
 print(f"\nExtracción completada. Total de Pokémon obtenidos: {len(todos_los_pokemon)}")
 
+# Paso 3: Captura de detalles específicos
 print("\nObteniendo detalles específicos de cada Pokémon...")
 pokemon_detallados = []
 
@@ -65,11 +68,8 @@ df['height_m'] = df['height'] / 10  # Convertir decímetros a metros
 df['weight_kg'] = df['weight'] / 10  # Convertir hectogramos a kilogramos
 df['bmi'] = df['weight_kg'] / (df['height_m'] ** 2)
 
-# Formatear columnas
-df['identificador_ninja'] = df.index.map(lambda x: f"ANBU-{x:03d}")
-
 print("\nTransformación completada. Muestra del DataFrame:")
-print(df[['identificador_ninja', 'name', 'height_m', 'weight_kg', 'bmi']].head())
+print(df[['name', 'height_m', 'weight_kg', 'bmi', 'base_experience']].head())
 
 # Guardar en diferentes formatos
 df.to_csv('pergamino_pokemon.csv', index=False)
