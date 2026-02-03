@@ -99,7 +99,7 @@ def extraer_datos_fila(fila):
         
         # Buscamos elementos que contengan nombre y símbolo
         nombre_elemento = nombre_celda.find('p', class_=lambda x: x and ('name' in str(x).lower() or 'sc-' in str(x)))
-        simbolo_elemento = nombre_celda.find('p', class_=lambda x: x and ('coin-item-symbol' in str(x).lower() or 'sc-' in str(x)))
+        simbolo_elemento = nombre_celda.find('p', class_='coin-item-symbol')
         
         nombre = nombre_elemento.text.strip() if nombre_elemento else "No disponible"
         simbolo = simbolo_elemento.text.strip() if simbolo_elemento else "No disponible"
