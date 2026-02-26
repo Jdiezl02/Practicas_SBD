@@ -17,7 +17,7 @@ from sklearn.preprocessing import StandardScaler
 
 ## Paso 2
 
-cargamos el dataset y limpiamos.
+Cargamos el dataset y limpiamos.
 ```
 df = pd.read_csv("aptitudes_ninja.csv")
 
@@ -67,7 +67,7 @@ plt.show()
 
 ## Paso 4
 
-probamos el k optimo y mostramos el grafico.
+Probamos el k optimo y mostramos el grafico.
 ```
 k_optimo = 4
 
@@ -121,7 +121,7 @@ print("\nArchivo guardado: ninjas_clasificados.csv")
 ## Paso 5
 
 Aqui lo interpretamos
-´´´
+```
 for i, centro in enumerate(centroides_original):
     fuerza, chakra = centro
 
@@ -133,11 +133,11 @@ for i, centro in enumerate(centroides_original):
         tipo = "Ninjas Balanceados / Exploradores"
 
     print(f"Cluster {i} → {tipo}")
-´´´
 
 ![alt text](image-1.png)
+```
 
 ## Conclusion
 
->La k buena es 4 y los 4 grupos son que solo tienen buen fisico,solo tiene buen control de chakra,no tiene ni buen control de chakra ni fuerza fisica y que tiene buena fuerza fisica y buen control de chakra.
+>La k buena es 4 ya que si ves el grafico de codo apartir del 4 se vuleve plano y 4 esta fromando el Los 4 grupos son que solo tienen buen fisico,solo tiene buen control de chakra,no tiene ni buen control de chakra ni fuerza fisica y que tiene buena fuerza fisica y buen control de chakra.
 
