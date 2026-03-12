@@ -35,3 +35,15 @@
 
 # Captura
 ![alt text](image-6.png)
+
+# Adicional
+>Creamos una copia de uno nuestro y lo exportamos al gold con los filtros aplicados en csv.
+![alt text](image-7.png)
+
+>Importamos en el csv filtrado.
+![alt text](image-8.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
+
+>Y ya lo hemos creado pero da error.
+![alt text](image-11.png)
