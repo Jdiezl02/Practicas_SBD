@@ -95,6 +95,7 @@ select aldea,
        count(*) as actividades_sospechosas
 from misiones_ok
 where lower(descripcion) like '%sospech%'
+  and cast(ts as timestamp) >= current_timestamp - interval '1' month
 group by aldea
 order by actividades_sospechosas desc;
 ```
