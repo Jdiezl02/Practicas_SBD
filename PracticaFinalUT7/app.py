@@ -6,6 +6,7 @@ from scipy.spatial import distance
 from sklearn.cluster import KMeans
 import plotly.express as px
 import plotly.graph_objects as go
+import os 
 
 # Configuración básica de la app de Streamlit.
 # Aquí definimos el título de la pestaña y el diseño general (ancho completo).
