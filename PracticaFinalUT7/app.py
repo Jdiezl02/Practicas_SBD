@@ -16,8 +16,9 @@ st.set_page_config(page_title="Centro de Inteligencia", layout="wide")
 # para no estar leyendo el CSV cada vez que se recarga la app.
 @st.cache_data
 def load_data():
-    df = pd.read_csv("players_data.csv")
-    return df
+    base_dir = os.path.dirname(__file__)
+    file_path = os.path.join(base_dir, "players_data.csv")
+    return pd.read_csv(file_path)
 
 df = load_data()
 
